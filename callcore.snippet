@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Public Method in turn Calling "Core" method</Title>
+      <Shortcut>callcore</Shortcut>
+      <Description>Code snippet for declaring a public method that in turn calls out to a virtual/abstract method with the same name with a suffix of "Core". Language Version: C# 3.0 or higher</Description>
+      <Author>Shiv Kumar</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+        <Literal>
+          <ID>type1</ID>
+          <ToolTip>Parameter type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>type2</ID>
+          <ToolTip>Parameter type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>type3</ID>
+          <ToolTip>Parameter type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>type4</ID>
+          <ToolTip>Parameter type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>param1</ID>
+          <ToolTip>Parameter Name</ToolTip>
+          <Default>parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>param2</ID>
+          <ToolTip>Parameter type</ToolTip>
+          <Default>parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>param3</ID>
+          <ToolTip>Parameter type</ToolTip>
+          <Default>parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>param4</ID>
+          <ToolTip>Parameter type</ToolTip>
+          <Default>parameter</Default>
+        </Literal>
+      </Declarations>      
+      <Code Language="csharp">
+        <![CDATA[public void $methodName$($type1$ $param1$, $type2$ $param2$, $type3$ $param3$, $type4$ $param4$)
+        {
+          $methodName$Core($param1$, $param2$, $param3$, $param4$);
+        }
+        
+        protected abstract void $methodName$Core($type1$ $param1$, $type2$ $param2$, $type3$ $param3$, $type4$ $param4$);
+        $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+

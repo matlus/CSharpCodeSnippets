@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Test Method With Category - Edge Case Class Test</Title>
+      <Shortcut>testet</Shortcut>
+      <Description>Code snippet for a test method with the Test Category - Edge Case Class Test</Description>
+      <Author>Shiv Kumar</Author>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualStudio.TestTools.UnitTesting</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Literal>
+          <ID>unitOfWork</ID>
+          <ToolTip>Replace with the name of the Unit Of Work OR the name of the method you are testing</ToolTip>
+          <Default>UnitOfWorkOrMethodName</Default>
+        </Literal>
+        <Literal>
+          <ID>scenario</ID>
+          <ToolTip>Replace with Description of the Scenario you are testing</ToolTip>
+          <Default>Scenario</Default>
+        </Literal>
+        <Literal>
+          <ID>expectation</ID>
+          <ToolTip>Replace with a Description of the Expection</ToolTip>
+          <Default>Expectation</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>TestMethod</ID>
+          <Function>SimpleTypeName(global::Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[$TestMethod$]
+        [TestCategory("Edge Case Class Test")]
+        public void $unitOfWork$_$scenario$_$expectation$()
+        {
+              // Arrange
+              $end$
+              
+              // Act
+              
+              
+              // Assert
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

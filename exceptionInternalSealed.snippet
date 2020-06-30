@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>public sealed exception With ExcludeFromCodeCoverage</Title>
+			<Shortcut>ExceptionEx</Shortcut>
+			<Description>Code snippet for defining an internal sealed exception with ExcludeFromCodeCoverage attribute</Description>
+			<Author>Shiv Kumar</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>newException</ID>
+					<ToolTip>Name of your exception</ToolTip>
+					<Default>My</Default>
+				</Literal>
+				<Literal>
+					<ID>baseException</ID>
+					<ToolTip>Base type</ToolTip>
+					<Function>SimpleTypeName(global::System.Exception)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemException</ID>
+					<Function>SimpleTypeName(global::System.Exception)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[ExcludeFromCodeCoverage]
+public sealed class $newException$Exception : $baseException$
+{
+  public $newException$Exception() { }
+  public $newException$Exception( string message ) : base( message ) { }
+  public $newException$Exception( string message, $SystemException$ inner ) : base( message, inner ) { }
+}]]>
+			</Code>
+      <Imports>
+        <Import>
+          <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
+        </Import>
+      </Imports>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
