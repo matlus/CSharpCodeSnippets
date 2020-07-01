@@ -80,3 +80,78 @@ finally
 {
 }
 ```
+## Test Method With Category - Acceptance Test  
+**Shortcut:** `testat`  
+**Description:** Code snippet for a test method with the Test Category - Acceptance Test
+```C#
+[TestMethod]
+[TestCategory("Acceptance Test")]
+public void UnitOfWorkOrMethodName_Scenario_Expectation()
+{
+    // Arrange
+
+    // Act
+
+    // Assert
+}
+```
+## Test Method With Category - Class Integration Test  
+**Shortcut:** `testcit`  
+**Description:** Code snippet for a test method with the Test Category - Class Integration Test
+```C#
+[TestMethod]
+[TestCategory("Class Integration Test")]
+public void UnitOfWorkOrMethodName_Scenario_Expectation()
+{
+    // Arrange
+
+    // Act
+
+    // Assert
+}
+```
+## Test Method With Category - Class Test
+**Shortcut:** `testct`  
+**Description:** Code snippet for a test method with the Test Category - Class Test
+```C#
+[TestMethod]
+[TestCategory("Class Test")]
+public void UnitOfWorkOrMethodName_Scenario_Expectation()
+{
+    // Arrange
+
+    // Act
+
+    // Assert
+}
+```
+## Test Method With Category - Composite Test
+**Shortcut:** `testcom`  
+**Description:** Code snippet for a test method with the Test Category - Composite Test
+```C#
+[TestMethod]
+[TestCategory("Composite Test")]
+public void UnitOfWorkOrMethodName_Scenario_Expectation()
+{
+    // Arrange
+
+    // Act
+
+    // Assert
+}
+```
+## Test Method With Category - Edge Case Class Test
+**Shortcut:** `testet`  
+**Description:** Code snippet for a test method with the Test Category - Edge Case Class Test
+```C#
+[TestMethod]
+[TestCategory("Edge Case Class Test")]
+public void UnitOfWorkOrMethodName_Scenario_Expectation()
+{
+    // Arrange
+
+    // Act
+
+    // Assert
+}
+```
